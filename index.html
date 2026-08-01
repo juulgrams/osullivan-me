@@ -7,7 +7,17 @@
 <style>
   html, body { height: 100%; margin: 0; background: #fff; }
   body { display: flex; align-items: center; justify-content: center; padding: 2rem; }
-  img { max-width: min(480px, 100%); max-height: 80vh; height: auto; display: block; }
+  img {
+    max-width: min(240px, 60%);
+    max-height: 60vh;
+    height: auto;
+    display: block;
+    animation: spin 15s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) {
+    img { animation: none; }
+  }
 </style>
 </head>
 <body>
